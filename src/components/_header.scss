@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0.5rem 0.5rem 0.5rem;
+  align-items: center;
+
+  .logo {
+    font-family: "Satisfy", cursive;
+    font-size: 1.5rem;
+  }
+  li {
+    border: none;
+    border-radius: 2rem;
+    padding: 0.8rem;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    background-color: $color2;
+    color: white;
+    &:hover {
+      transform: scale(1.08);
+      -webkit-transition: all 0.8s 0s ease-in-out;
+      -moz-transition: all 0.8s 0s ease-in-out;
+      -o-transition: all 0.8s 0s ease-in-out;
+      transition: all 0.8s 0s ease-in-out;
+    }
+  }
+}

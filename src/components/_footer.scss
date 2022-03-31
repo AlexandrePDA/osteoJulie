@@ -1,0 +1,43 @@
+.footer {
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 10rem;
+  background-color: $color2;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  .adress {
+    display: flex;
+    align-items: center;
+    .icon {
+      font-size: 2rem;
+    }
+  }
+  i {
+    color: $color4;
+    margin-right: 0.7rem;
+  }
+}
+
+a {
+  color: $color4;
+  border: 0 solid transparent;
+  background-color: white;
+  border-radius: 2rem;
+  padding: 1rem;
+
+}
+
+.doctolib, .stars {
+
+
+    &:hover {
+      transform: scale(1.08);
+        -webkit-transition: all 0.8s 0s ease-in-out;
+        -moz-transition: all 0.8s 0s ease-in-out;
+        -o-transition: all 0.8s 0s ease-in-out;
+        transition: all 0.8s 0s ease-in-out;
+}
+}
