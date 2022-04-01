@@ -5,23 +5,35 @@ import Doctolib from "../assets/doctolib.png";
 const Form = () => {
   function sendEmail(e) {
     e.preventDefault();
-    console.log("tes");
+
+    emailjs
+      .sendForm(
+        "service_bxxtksn",
+        "template_wbn6wgc",
+        e.target,
+        "Ne7PybCs4Qo0YJdVl"
+      )
+      .then((res) => {
+        console.log(res);
+      }).catch((err) => console.log(err))
   }
 
   return (
     <>
-      <h1 className="title_contact">Contactez moi ou prenez un rendez-vous sur Doctolib</h1>
+      <h1 className="title_contact">
+        Contactez moi ou prenez un rendez-vous sur Doctolib
+      </h1>
       <div className="Parent_Form">
         <div className="div1_Form">
           <form action="send" onSubmit={sendEmail}>
             <label htmlFor="text">Nom et Prénom</label>
-            <input type="text" name="name" />
+            <input id="input" type="text" name="name" />
 
             <label htmlFor="email">Email</label>
-            <input type="email" name="user_email" />
+            <input id="input" type="email" name="user_email" />
 
             <label htmlFor="number">Téléphone</label>
-            <input type="number" name="user_telephone" />
+            <input id="input" type="number" name="user_telephone" />
 
             <label htmlFor="message">Message</label>
             <textarea
@@ -40,7 +52,7 @@ const Form = () => {
           </a>
           <div className="infosDoctolib">
             <h1 className="subject">Horaires et contact</h1>
-            <h2>Ouverture du secrétariat</h2>
+            <h2>Ouverture du cabinet</h2>
             <p>
               9h00 - 13h00 <br /> 14h00 - 20h00
             </p>
