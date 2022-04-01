@@ -6,17 +6,20 @@
   grid-row-gap: 0px;
   margin-top: 2rem;
 
-  h1 {
+  .titlePresentation {
     font-family: "Roboto", sans-serif;
-    font-size: 6rem;
+    font-size: 5rem;
     text-align: center;
     text-decoration: underline solid $color3;
+  }
+  h2 {
+    font-size: 1.4rem;
   }
 
   .div1 {
     grid-area: 1 / 1 / 7 / 3;
     width: 30rem;
-    height: 35rem;
+    height: 25rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,12 +32,9 @@
     height: 20rem;
     border-radius: 1rem;
     object-fit: cover;
+    animation: appear 1.5s;
     &:hover {
-      transform: scale(1.08);
-      -webkit-transition: all 0.8s 0s ease-in-out;
-      -moz-transition: all 0.8s 0s ease-in-out;
-      -o-transition: all 0.8s 0s ease-in-out;
-      transition: all 0.8s 0s ease-in-out;
+      @include effect-hover
     }
   }
   .div3 {
@@ -44,12 +44,9 @@
     border-radius: 1rem;
     object-fit: cover;
     margin-left: -1.5rem;
+    animation: appearDelay1 2s;
     &:hover {
-      transform: scale(1.08);
-      -webkit-transition: all 0.8s 0s ease-in-out;
-      -moz-transition: all 0.8s 0s ease-in-out;
-      -o-transition: all 0.8s 0s ease-in-out;
-      transition: all 0.8s 0s ease-in-out;
+      @include effect-hover
     }
   }
   .div4 {
@@ -59,14 +56,108 @@
     border-radius: 1rem;
     object-fit: cover;
     margin-left: 2rem;
+    animation: appearDelay2 2.7s;
     &:hover {
-      transform: scale(1.08);
-      -webkit-transition: all 0.8s 0s ease-in-out;
-      -moz-transition: all 0.8s 0s ease-in-out;
-      -o-transition: all 0.8s 0s ease-in-out;
-      transition: all 0.8s 0s ease-in-out;
+      @include effect-hover
     }
   }
 }
 
+.MediaPic {
+  display: none;
+}
+
 // MEDIA QUERIES
+
+@media screen and (max-width: 1270px) {
+  .Parent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem 0 2rem;
+    .div4 {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1065px) {
+  .div1 {
+    margin-left: 2rem;
+  }
+  .div2 {
+    display: none;
+  }
+  .div3 {
+    margin-right: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 885px) {
+  .div3 {
+    margin-right: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .div1 {
+    margin: auto;
+  }
+  .div3 {
+    display: none;
+  }
+  .MediaPic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // .Pic1 {
+    //   width: 20%;
+    //   height: 30%;
+    //   margin: -2rem 0.5rem 1rem 0;
+    //   border-radius: 1.5rem;
+    //   object-fit: cover;
+    // }
+    // .Pic2 {
+    //   width: 20%;
+    //   height: 30%;
+    //   margin: -2rem 0.5rem 1rem 0;
+    //   border-radius: 1.5rem;
+    //   object-fit: cover;
+    // }
+    .Pic3 {
+      width: 55%;
+      height: 25%;
+      margin: -2rem 0.5rem 4rem 0;
+      border-radius: 1.5rem;
+      object-fit: cover;
+      animation: appear2 1s;
+    }
+  }
+}
+
+
+@media screen and (max-width: 610px) { 
+  .titlePresentation {
+    font-size: 3rem !important;
+  }
+  h2 {
+    font-size: 1rem !important;
+    padding: 0 2.2rem 0 2.2rem;
+  }
+  .div1 {
+    height: 15rem !important;
+  }
+}
+
+@media screen and (max-width: 410px) { 
+  .div1 {
+    margin-top: -4rem;
+  }
+  .titlePresentation {
+    font-size: 2.5rem !important;
+  }
+  h2 {
+    font-size: .7rem !important;
+    padding: 0 2.2rem 0 2.2rem;
+  }
+}

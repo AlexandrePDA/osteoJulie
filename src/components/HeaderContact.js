@@ -9,7 +9,7 @@ const HeaderContact = () => {
                 <p>Julie Pires </p>
             </div>
             <NavLink to="/" className="nav">
-            <li>Accueil</li>
+            <li><i class="fa-solid fa-house"></i><span>Accueil</span></li>
           </NavLink>
         </div>
         </div>

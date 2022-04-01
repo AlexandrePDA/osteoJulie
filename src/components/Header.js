@@ -8,7 +8,7 @@ const Header = () => {
                 <p>Julie Pires </p>
             </div>
             <NavLink to="/contact" className="nav">
-            <li>Contactez-moi</li>
+            <li><i class="fa-solid fa-phone"></i><span>Contactez-moi</span></li>
           </NavLink>
         </div>
     );

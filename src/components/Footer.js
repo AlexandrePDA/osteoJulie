@@ -16,7 +16,7 @@ const Footer = () => {
         </p>
       </div>
       <div className="doctolib">
-        <a href="#">
+        <a href="https://www.doctolib.fr/osteopathe/varennes-sur-seine/julie-pires-de-almeida">
           <i class="fa-solid fa-briefcase-medical"></i> Doctolib
         </a>
       </div>

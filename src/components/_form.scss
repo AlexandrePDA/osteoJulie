@@ -1,0 +1,114 @@
+.title_contact {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  text-decoration: underline solid $color3;
+
+}
+
+.Parent_Form {
+  display: flex;
+  margin-bottom: 2rem;
+
+  .div1_Form {
+    width: 50%;
+  }
+
+  .div2_Form {
+    width: 50%;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem 1.5rem 2rem;
+
+    label {
+      font-family: "Roboto", sans-serif;
+      font-size: 1.2rem;
+      text-align: center;
+      margin: 0.5rem;
+      text-decoration: underline solid $color3;
+      font-weight: bold;
+    }
+    input {
+      border-radius: 1rem;
+      height: 2.5rem;
+      border: 1px solid $color2;
+      width: 20rem;
+    }
+    textarea {
+      border-radius: 1.5rem;
+      width: 20rem;
+    }
+    #btn {
+      margin-top: 1.5rem;
+      width: 30%;
+      height: 3rem;
+      border: none;
+      border-radius: 2rem;
+      cursor: pointer;
+      background-color: $color2;
+      color: white;
+      &:hover {
+        @include effect-hover;
+      }
+    }
+  }
+}
+
+.div2_Form {
+  text-align: center;
+  margin-top: 2rem;
+  .DoctolibPicture {
+    width: 8rem;
+    height: 4rem;
+    border-radius: 1.5rem;
+    &:hover {
+      @include effect-hover;
+    }
+  }
+  .subject {
+    font-family: "Roboto", sans-serif;
+    margin-top: 2rem;
+    text-decoration: underline solid $color3;
+
+  }
+  h2 {
+    margin-top: 1rem;
+    font-family: "Roboto", sans-serif;
+  }
+  p {
+    font-family: "Roboto", sans-serif;
+    margin-top: .8rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+// MEDIA QUERIES
+
+@media screen and (max-width: 920px) {
+  .Parent_Form {
+    display: flex;
+    flex-direction: column;
+  }
+  .div1_Form {
+    width: 100% !important;
+  }
+  .div2_Form {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  input {
+    width: 14rem !important;
+  }
+  textarea {
+    width: 14rem !important;
+
+  }
+}
